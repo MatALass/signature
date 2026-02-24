@@ -1,62 +1,92 @@
-<table cellpadding="0" cellspacing="0" border="0"
-       style="font-family: Arial, Helvetica, sans-serif; font-size:14px; color:#111;">
-  <tr>
-    <!-- LEFT BAR -->
-    <td style="width:6px; background:#0b1f33;"></td>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mathieu Alassoeur · Contact</title>
 
-    <!-- CONTENT -->
-    <td style="padding:14px 18px;">
-      <div style="font-size:21px; font-weight:800; line-height:1.15;">
-        Mathieu Alassoeur
+  <!--
+    Privacy note:
+    This page is designed to be public but tries to reduce spam scraping.
+    If you WANT search engines to index it, remove the robots meta + robots.txt.
+  -->
+  <meta name="robots" content="noindex,nofollow" />
+
+  <meta name="description" content="Minimal contact card with quick copy actions." />
+
+  <link rel="icon" type="image/png" href="assets/icons/github.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <section class="card" aria-label="Contact card">
+      <header class="header">
+        <div class="title">
+          <h1>Mathieu Alassoeur</h1>
+          <p class="subtitle">Data Analyst · BI</p>
+        </div>
+      </header>
+
+      <ul class="links" aria-label="Contact methods">
+        <li class="row">
+          <img class="icon" src="assets/icons/phone.png" alt="Phone" width="22" height="22" />
+          <a id="phoneLink" class="value" href="#" rel="nofollow">Loading…</a>
+          <button class="btn" type="button" data-copy="phone" aria-label="Copy phone number">Copy</button>
+        </li>
+
+        <li class="row">
+          <img class="icon" src="assets/icons/email.png" alt="Email" width="22" height="22" />
+          <a id="emailLink" class="value" href="#" rel="nofollow">Loading…</a>
+          <button class="btn" type="button" data-copy="email" aria-label="Copy email">Copy</button>
+        </li>
+
+        <li class="row">
+          <img class="icon" src="assets/icons/linkedin.png" alt="LinkedIn" width="22" height="22" />
+          <a class="value" href="https://www.linkedin.com/in/mathieu-alassoeur/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <span class="spacer"></span>
+        </li>
+
+        <li class="row">
+          <img class="icon" src="assets/icons/github.png" alt="GitHub" width="22" height="22" />
+          <a class="value" href="https://github.com/MatALass" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span class="spacer"></span>
+        </li>
+      </ul>
+
+      <div class="footer">
+        <button class="btn ghost" type="button" id="downloadVcard">Download vCard</button>
+        <span class="toast" id="toast" role="status" aria-live="polite"></span>
       </div>
 
-      <div style="margin-top:4px; color:#555; letter-spacing:0.6px; font-size:12px; text-transform:uppercase;">
-        Data Analyst · BI
+      <!--
+        Anti-scrape: store contact info as pieces.
+        (Not bulletproof, but reduces naive scraping.)
+      -->
+      <div hidden>
+        <span id="data"
+          data-phone-country="+33"
+          data-phone-a="6"
+          data-phone-b="88"
+          data-phone-c="04"
+          data-phone-d="55"
+          data-phone-e="70"
+          data-email-user="mathieu.alassoeur"
+          data-email-domain="gmail.com"
+        ></span>
       </div>
 
-      <div style="margin-top:10px; height:2px; width:44px; background:#0b1f33;"></div>
+      <noscript>
+        <p class="noscript">
+          This page needs JavaScript to display contact details (anti-spam).
+        </p>
+      </noscript>
+    </section>
 
-      <!-- CONTACT -->
-      <table cellpadding="0" cellspacing="0" border="0" style="margin-top:12px; font-size:13px; color:#222;">
-        <tr>
-          <td style="padding-right:8px; vertical-align:middle;">
-            <img src="https://raw.githubusercontent.com/MatALass/signature/main/telephone_icone.png"
-                 width="14" height="14" style="display:block; border:0;" alt="Phone">
-          </td>
-          <td style="vertical-align:middle;">
-            +33 6 88 04 55 70
-          </td>
-        </tr>
-        <tr>
-          <td style="padding-right:8px; padding-top:6px; vertical-align:middle;">
-            <img src="https://raw.githubusercontent.com/MatALass/signature/main/email_icone.png"
-                 width="14" height="14" style="display:block; border:0;" alt="Email">
-          </td>
-          <td style="padding-top:6px; vertical-align:middle;">
-            <a href="mailto:mathieu.alassoeur@gmail.com" style="color:#111; text-decoration:none;">
-              mathieu.alassoeur@gmail.com
-            </a>
-          </td>
-        </tr>
-      </table>
+    <p class="note">
+      Tip: enable GitHub Pages (Settings → Pages) to host this as a tiny public landing card.
+    </p>
+  </main>
 
-      <!-- SOCIAL -->
-      <table cellpadding="0" cellspacing="0" border="0" style="margin-top:12px;">
-        <tr>
-          <td style="padding-right:10px;">
-            <a href="https://www.linkedin.com/in/mathieu-alassoeur-251544253/" style="text-decoration:none;">
-              <img src="https://raw.githubusercontent.com/MatALass/signature/main/linkedin_icone.png"
-                   width="18" height="18" style="display:block; border:0;" alt="LinkedIn">
-            </a>
-          </td>
-          <td>
-            <a href="https://github.com/MatALass" style="text-decoration:none;">
-              <img src="https://raw.githubusercontent.com/MatALass/signature/main/github_icone.png"
-                   width="18" height="18" style="display:block; border:0;" alt="GitHub">
-            </a>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
+  <script src="assets/script.js" defer></script>
+</body>
+</html>
